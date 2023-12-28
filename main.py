@@ -1,12 +1,13 @@
 
 from aiogram import Bot, Dispatcher, types
 from aiogram import executor
-from config import BOT_TOKEN
 from weather_parser import parse_weather, all_parse_weather
 from coordinates import get_city, City
+from dotenv import load_dotenv
+import os
 
-
-bot=Bot(BOT_TOKEN)
+load_dotenv()
+bot=Bot(os.getenv('TOKEN'))
 dp=Dispatcher(bot)
 
 HELP_COMMAND = '''
