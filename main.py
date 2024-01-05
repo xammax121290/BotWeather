@@ -45,7 +45,6 @@ async def command_any(message: types.Message):
   weather_info = all_parse_weather(town)
   await message.answer(text=weather_info)
 
-
 if __name__ == '__main__':
   executor.start_polling(dp,
                          skip_updates=True,
