@@ -17,13 +17,14 @@ def all_parse_weather(town):
     #title = soup.select("#wob_dc")[0].getText()
     humidity = soup.select("#wob_hm")[0].getText()
     wind = soup.select("#wob_ws")[0].getText()
+    wind = round(int(wind)/2.237)
 
     weather_info = (
         f"Погода в городе {town}:\n"
         #f"Состояние: {title}\n"
         f"Температура: {temperature}°C\n"
         f"Влажность: {humidity}\n"
-        f"Ветер: {wind}")
+        f"Ветер: {wind}м/с\n")
     return weather_info
   else:
     return f"Город {town} не найден. Проверьте правильность ввода"
