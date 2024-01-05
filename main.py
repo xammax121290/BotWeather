@@ -1,8 +1,7 @@
 
 from aiogram import Bot, Dispatcher, types
 from aiogram import executor
-from weather_parser import parse_weather, all_parse_weather
-from coordinates import get_city, City
+from weather_parser import all_parse_weather
 from dotenv import load_dotenv
 import os
 
