@@ -13,6 +13,7 @@ def all_parse_weather(town):
 
   if soup.find("span", {"class": "wob_t", "id": "wob_tm"}):
     temperature = soup.select("#wob_tm")[0].getText()
+    temperature= (int(temperature)-32)*5/9
     #title = soup.select("#wob_dc")[0].getText()
     humidity = soup.select("#wob_hm")[0].getText()
     wind = soup.select("#wob_ws")[0].getText()
