@@ -17,7 +17,7 @@ def all_parse_weather(town):
     #title = soup.select("#wob_dc")[0].getText()
     humidity = soup.select("#wob_hm")[0].getText()
     wind = soup.select("#wob_ws")[0].getText()
-    wind = round(int(wind)/2.237)
+    wind = round(int(wind[0:-4])/2.237)
 
     weather_info = (
         f"Погода в городе {town}:\n"
